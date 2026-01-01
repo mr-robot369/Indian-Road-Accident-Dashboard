@@ -2,7 +2,7 @@
 import pandas as pd
 import requests
 from dash import Dash, dcc, html, Input, Output
-from roadintel.charts import (
+from charts import (
     create_monthly_trend_chart,
     create_state_bar_chart,
     create_severity_donut_chart,
