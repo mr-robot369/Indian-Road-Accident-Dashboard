@@ -62,8 +62,15 @@ geojson_url = "https://raw.githubusercontent.com/geohacker/india/master/state/in
 geojson_data = requests.get(geojson_url).json()
 
 # !---- Initialize the Dash App ----
-app = Dash(__name__)
+app = Dash(
+    __name__,
+    serve_locally=True,
+    suppress_callback_exceptions=True
+)
 server = app.server
+
+app.scripts.config.serve_locally = True
+app.css.config.serve_locally = True
 
 # !---- Dashboard layout ----
 app.layout = html.Div(children=[
