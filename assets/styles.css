@@ -1,0 +1,270 @@
+/* --- 1. Global Styles & Variables --- */
+:root {
+  --font-family: 'Arial, sans-serif';
+  --bg-color: #111111;
+  --panel-color: #222222;
+  --text-color: #FFFFFF;
+  --sub-text-color: #AAAAAA;
+  --accent-red: #FF4136;
+  --accent-blue: #3498db;
+  --accent-green: #2ecc71;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 2. Header --- */
+.header {
+  background-color: var(--panel-color);
+  padding-bottom: 3px;
+  margin: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-title {
+  text-align: center;
+  padding-top: 20px;
+  color: var(--accent-red);
+  font-size: 40px;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 20px;
+  color: var(--sub-text-color);
+  margin: 0;
+}
+
+/* --- 3. Main Content --- */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+/* --- 5. Left Sidebar : Filters --- */
+.sidebar {
+  flex-basis: 25%;
+  min-width: 220px;
+  max-width: 300px;
+  background-color: var(--panel-color);
+  border-radius: 15px;
+  padding: 15px;
+
+  position: sticky;
+  top: 20px;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+      display: none;    /* To hide the scrollbar */
+    }
+
+.filter-column-time,
+.filter-column-location,
+.filter-column-accident,
+.filter-column-climate,
+.filter-column-driver,
+.filter-column-vehicle {
+  width: auto;
+  margin-bottom: 25px;
+}
+
+.filter-heading-time { 
+  color: var(--accent-blue); 
+  border-bottom: 1px solid var(--accent-blue); 
+  padding-bottom: 5px; 
+}
+
+.filter-heading-location { 
+  color: var(--accent-green);
+  border-bottom: 1px solid var(--accent-green);
+  padding-bottom: 5px;
+}
+
+.filter-heading-accident { 
+  color: var(--accent-red);
+  border-bottom: 1px solid var(--accent-red);
+  padding-bottom: 5px;
+}
+
+.filter-heading-climate { 
+  color: var(--accent-blue);
+  border-bottom: 1px solid var(--accent-blue);
+  padding-bottom: 5px;
+}
+
+.filter-heading-driver { 
+  color: var(--accent-green);
+  border-bottom: 1px solid var(--accent-green);
+  padding-bottom: 5px;
+}
+
+.filter-heading-vehicle { 
+  color: var(--accent-red);
+  border-bottom: 1px solid var(--accent-red);
+  padding-bottom: 5px;
+}
+
+.filter-label { 
+  font-weight: bold; 
+  margin-top: 15px; 
+  display: block; 
+}
+
+.filter-dropdown { 
+  margin-top: 5px; 
+  color: #333; 
+}
+
+/* --- 6. Right Content : KPIs & Charts --- */
+.main-content {
+  flex-grow: 1; /* Take the remaining space */
+  padding-left: 20px;
+}
+
+/* KPI Styling */
+.kpi-row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--panel-color);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card {
+  flex-grow: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.kpi-card h3 { 
+  margin-top: 0; 
+  margin-bottom: 5px; 
+}
+
+.kpi-card p { 
+  margin: 0; 
+  color: var(--sub-text-color); 
+}
+
+.kpi-value-accent { 
+  color: var(--accent-red); 
+}
+
+/* --- Chart Section Styling --- */
+.chart-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 20px; /* space between charts */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Each chart card */
+.chart-card {
+  background-color: var(--panel-color);
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  min-height: 400px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for interactivity */
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .chart-row {
+    grid-template-columns: 1fr; /* 1 column on tablets & mobile */
+  }
+}
+
+/* ---- Map Section Styling ---- */
+.map-row {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.map-card {
+  background-color: var(--panel-color);
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 600px; /* Set the height here */
+}
+
+/* ---- Insight Section Styling ---- */
+.insight-row {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.insight-card {
+  background-color: var(--panel-color);
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.insight-card h3 {
+  color: var(--accent-red);
+  border-bottom: 1px solid var(--accent-red);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.insight-card ul {
+  list-style-type: none; /* Removes default bullets */
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.insight-card li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 35px; /* Space for the emoji */
+  position: relative; /* Needed for the emoji */
+  color: var(--sub-text-color);
+  line-height: 1.4;
+}
+
+/* This adds the 'bullet' emoji before each list item */
+.insight-card li::before {
+  content: '🚨';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 1.2rem;
+}
+
+.insight-card .conclusion {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  border-top: 1px solid var(--sub-text-color);
+  padding-top: 20px;
+}

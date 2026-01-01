@@ -1,12 +1,14 @@
 ---
 title: Indian Road Accident Dashboard
-emoji: 🏢
-colorFrom: gray
-colorTo: red
+emoji: 🚦
+colorFrom: red
+colorTo: orange
 sdk: docker
+app_file: app.py
 pinned: false
-license: mit
-short_description: Interactive dashboard visualizing road accident statistics
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+# Indian Road Accident Dashboard 🇮🇳
+
+An interactive Plotly Dash dashboard visualizing road accident statistics across Indian states.
+Includes state-wise accident distribution, trends, and map-based analysis.
