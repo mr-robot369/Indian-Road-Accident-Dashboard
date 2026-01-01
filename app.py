@@ -479,7 +479,7 @@ def update_kpi(sel_years, sel_months, sel_week, sel_pod, sel_states, sel_cities,
     )
 
 if __name__ == "__main__":
-    app.run_server(
+    app.run(
         host="0.0.0.0",
         port=7860,
         debug=False
