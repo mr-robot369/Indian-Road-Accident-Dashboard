@@ -1,3 +1,13 @@
+---
+title: Indian Road Accident Dashboard
+emoji: 🚦
+colorFrom: red
+colorTo: yellow
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # 🚦 Indian Road Accident Dashboard 🇮🇳
 
 🔗 **Live Demo:**\
@@ -56,14 +66,9 @@ Docker, ensuring public accessibility and reproducibility.
     indian-road-accident-dashboard/
     │
     ├── app.py
-    ├── charts/
-    │   ├── __init__.py
-    │   ├── map_charts.py
-    │   ├── trend_charts.py
-    │   └── summary_charts.py
-    │
+    ├── charts.py
     ├── data/
-    │   └── road_accident_data.csv
+    │   └── accident_preprocessed.csv
     │
     ├── assets/
     │   └── styles.css
