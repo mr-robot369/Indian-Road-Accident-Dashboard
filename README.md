@@ -12,7 +12,9 @@ pinned: false
 
 🔗 **Live Demo:**\
 https://mr-robot369-indian-road-accident-dashboard.hf.space/
-
+<p align="center">
+  <img src="assets/dashboard.png" alt="Dashboard Preview" width="95%">
+</p>
 ------------------------------------------------------------------------
 
 ## 📌 Overview
